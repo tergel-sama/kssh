@@ -57,6 +57,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 func (m model) View() string {
 	var b strings.Builder
+
 	title := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("212")).
 		Background(lipgloss.Color("236")).
@@ -64,18 +65,21 @@ func (m model) View() string {
 		Bold(true).
 		Render(" Select SSH Host ")
 	b.WriteString(title + "\n\n")
+
 	for i, h := range m.hosts {
 		line := fmt.Sprintf("%s → %s@%s", h.Name, h.User, h.Hostname)
 		if i == m.selected {
 			line = lipgloss.NewStyle().
-				Foreground(lipgloss.Color("229")).
-				Background(lipgloss.Color("57")).
+				Foreground(lipgloss.Color("#395B64")).
+				Background(lipgloss.Color("#E7F6F2")).
 				Padding(0, 1).
 				Render(line)
 		}
 		b.WriteString(line + "\n")
 	}
+
 	b.WriteString("\n↑/↓ or j/k to move · Enter to connect · q to quit\n")
+
 	return b.String()
 }
 

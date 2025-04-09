@@ -1,8 +1,6 @@
 # SSH Host Manager
 
-SSH Host Manager is a terminal-based application that provides a convenient way to manage and connect to your SSH servers. It presents a user-friendly interface for selecting SSH connections from a configuration file.
-
-![SSH Host Manager Demo](https://github.com/yourusername/ssh-host-manager/raw/main/demo.gif)
+Kssh is a terminal-based application that provides a convenient way to manage and connect to your SSH servers. It presents a user-friendly interface for selecting SSH connections from a configuration file.
 
 ## Features
 
@@ -40,7 +38,7 @@ sudo mv kssh /usr/local/bin/
 ### Using Go Install
 
 ```bash
-go install github.com/yourusername/ssh-host-manager@latest
+go install github.com/tergel-sama/kssh@latest
 ```
 
 ## Usage
@@ -48,7 +46,7 @@ go install github.com/yourusername/ssh-host-manager@latest
 Simply run the application:
 
 ```bash
-ssh-hosts
+kssh
 ```
 
 On first run, the application will create a default configuration file at `~/.ssh_hosts.yaml` if it doesn't exist.
