@@ -1,0 +1,105 @@
+# SSH Host Manager
+
+SSH Host Manager is a terminal-based application that provides a convenient way to manage and connect to your SSH servers. It presents a user-friendly interface for selecting SSH connections from a configuration file.
+
+![SSH Host Manager Demo](https://github.com/yourusername/ssh-host-manager/raw/main/demo.gif)
+
+## Features
+
+- Simple YAML-based configuration
+- Interactive TUI with keyboard navigation
+- Support for custom SSH keys, ports, and usernames
+- Automatic configuration generation
+- Colorful and intuitive interface
+
+## Installation
+
+### Prerequisites
+
+- Go 1.16 or higher
+- SSH client installed on your system
+
+### Installing from source
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/ssh-host-manager.git
+cd ssh-host-manager
+```
+
+2. Build the application:
+```bash
+go build -o ssh-hosts
+```
+
+3. Move the binary to your PATH:
+```bash
+sudo mv ssh-hosts /usr/local/bin/
+```
+
+### Using Go Install
+
+```bash
+go install github.com/yourusername/ssh-host-manager@latest
+```
+
+## Usage
+
+Simply run the application:
+
+```bash
+ssh-hosts
+```
+
+On first run, the application will create a default configuration file at `~/.ssh_hosts.yaml` if it doesn't exist.
+
+### Navigation
+
+- Use `↑/↓` arrow keys or `j/k` to select a host
+- Press `Enter` to connect to the selected host
+- Press `q` or `Ctrl+C` to quit
+
+## Configuration
+
+The configuration file is located at `~/.ssh_hosts.yaml` and uses YAML format.
+
+### Example Configuration
+
+```yaml
+hosts:
+  - name: production-server
+    hostname: example.com
+    user: admin
+    port: 22
+    key: ~/.ssh/id_rsa
+    
+  - name: staging-server
+    hostname: staging.example.com
+    user: developer
+    port: 2222
+    
+  - name: raspberry-pi
+    hostname: 192.168.1.100
+    user: pi
+    key: ~/.ssh/pi_key
+```
+
+### Configuration Fields
+
+Each host entry supports the following fields:
+
+| Field     | Description                           | Required | Default    |
+|-----------|---------------------------------------|----------|------------|
+| `name`    | Display name for the connection       | Yes      | N/A        |
+| `hostname`| Server hostname or IP address         | Yes      | N/A        |
+| `user`    | SSH username                          | Yes      | N/A        |
+| `port`    | SSH port                              | No       | 22         |
+| `key`     | Path to SSH private key               | No       | None       |
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
