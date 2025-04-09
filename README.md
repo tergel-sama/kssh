@@ -1,11 +1,13 @@
 # KSSH
 
-Kssh is a terminal-based application that provides a convenient way to manage and connect to your SSH servers. It presents a user-friendly interface for selecting SSH connections from a configuration file.
+Kssh is a terminal-based SSH manager with a slick, keyboard-driven interface. It lets you quickly browse and connect to your SSH servers using a simple YAML config file — no more memorizing IPs or typing long commands.
+
 
 ## Features
 
 - Simple YAML-based configuration
 - Interactive TUI with keyboard navigation
+- Vim-style navigation
 - Support for custom SSH keys, ports, and usernames
 - Automatic configuration generation
 - Colorful and intuitive interface
@@ -37,6 +39,7 @@ sudo mv kssh /usr/local/bin/
 
 ### Using Go Install
 
+not tested 
 ```bash
 go install github.com/tergel-sama/kssh@latest
 ```
