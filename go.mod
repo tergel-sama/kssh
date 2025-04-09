@@ -1,4 +1,4 @@
-module kssh
+module github.com/tergel-sama/kssh
 
 go 1.23.3
 

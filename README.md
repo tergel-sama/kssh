@@ -23,18 +23,18 @@ SSH Host Manager is a terminal-based application that provides a convenient way 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ssh-host-manager.git
-cd ssh-host-manager
+git clone https://github.com/tergel-sama/kssh.git 
+cd kssh
 ```
 
 2. Build the application:
 ```bash
-go build -o ssh-hosts
+go build -o kssh
 ```
 
 3. Move the binary to your PATH:
 ```bash
-sudo mv ssh-hosts /usr/local/bin/
+sudo mv kssh /usr/local/bin/
 ```
 
 ### Using Go Install
