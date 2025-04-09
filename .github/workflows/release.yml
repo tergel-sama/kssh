@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.19'
+          
+      - name: Build for multiple platforms
+        run: |
+          GOOS=darwin GOARCH=amd64 go build -o kssh-macos-amd64
+          GOOS=darwin GOARCH=arm64 go build -o kssh-macos-arm64
+          GOOS=linux GOARCH=amd64 go build -o kssh-linux-amd64
+          GOOS=linux GOARCH=arm64 go build -o kssh-linux-arm64
+          GOOS=windows GOARCH=amd64 go build -o kssh-windows-amd64.exe
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            kssh-macos-amd64
+            kssh-macos-arm64
+            kssh-linux-amd64
+            kssh-linux-arm64
+            kssh-windows-amd64.exe
