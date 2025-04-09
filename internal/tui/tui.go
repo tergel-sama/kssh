@@ -59,8 +59,8 @@ func (m model) View() string {
 	var b strings.Builder
 
 	title := lipgloss.NewStyle().
-		Foreground(lipgloss.Color("212")).
-		Background(lipgloss.Color("236")).
+		Foreground(lipgloss.Color("#E7F6F2")).
+		Background(lipgloss.Color("#395B64")).
 		Padding(0, 1).
 		Bold(true).
 		Render(" Select SSH Host ")
