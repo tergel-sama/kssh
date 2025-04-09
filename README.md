@@ -1,4 +1,4 @@
-# SSH Host Manager
+# KSSH
 
 Kssh is a terminal-based application that provides a convenient way to manage and connect to your SSH servers. It presents a user-friendly interface for selecting SSH connections from a configuration file.
 
@@ -27,7 +27,7 @@ cd kssh
 
 2. Build the application:
 ```bash
-go build -o kssh
+go build -o kssh cmd/main.go
 ```
 
 3. Move the binary to your PATH:
