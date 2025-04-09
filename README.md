@@ -1,13 +1,14 @@
 # KSSH
 
-Kssh is a terminal-based SSH manager with a slick, keyboard-driven interface. It lets you quickly browse and connect to your SSH servers using a simple YAML config file — no more memorizing IPs or typing long commands.
+Kssh is a terminal-based SSH manager with a slick, keyboard-driven interface. It lets you quickly browse and connect to your SSH servers using a simple YAML config file. 
+No more memorizing IPs or typing long commands.
 
 
 ## Features
 
 - Simple YAML-based configuration
 - Interactive TUI with keyboard navigation
-- Vim-style navigation
+- Vim style navigation
 - Support for custom SSH keys, ports, and usernames
 - Automatic configuration generation
 - Colorful and intuitive interface
