@@ -14,7 +14,7 @@ import (
 
 func main() {
 	// Get config path
-	cfgPath := filepath.Join(os.Getenv("HOME"), ".ssh_hosts.yaml")
+	cfgPath := filepath.Join(os.Getenv("HOME"), ".kssh_hosts.yaml")
 
 	// Check if config exists
 	data, err := os.ReadFile(cfgPath)

@@ -53,7 +53,7 @@ Simply run the application:
 kssh
 ```
 
-On first run, the application will create a default configuration file at `~/.ssh_hosts.yaml` if it doesn't exist.
+On first run, the application will create a default configuration file at `~/.kssh_hosts.yaml` if it doesn't exist.
 
 ### Navigation
 
@@ -63,7 +63,7 @@ On first run, the application will create a default configuration file at `~/.ss
 
 ## Configuration
 
-The configuration file is located at `~/.ssh_hosts.yaml` and uses YAML format.
+The configuration file is located at `~/.kssh_hosts.yaml` and uses YAML format.
 
 ### Example Configuration
 
